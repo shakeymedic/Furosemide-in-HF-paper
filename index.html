@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WMEBEM: IV Furosemide in ADHF</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-grey background */
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden; /* Ensure rounded corners apply to images */
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        /* Gradient for the 'Clinical Bottom Line' card */
+        .header-gradient {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6); /* WMEBEM Blue gradient */
+        }
+        /* Style for the 'Critical Appraisal Points' */
+        .appraisal-card {
+            border-left: 4px solid #1e3a8a;
+        }
+        /* Table styling */
+        .hypo-table th {
+            background-color: #f4f7fa;
+            border-bottom: 2px solid #e2e8f0;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+        .hypo-table td {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 12px 16px;
+            color: #334155;
+        }
+        .hypo-table tr:last-child td {
+            border-bottom: none;
+        }
+        .hypo-table tr:nth-child(even) {
+            background-color: #fafcff;
+        }
+        /* NEW: Responsive iframe container for YouTube */
+        .responsive-iframe-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+        .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <!-- WMEBEM Logo -->
+            <img src="https://iili.io/KGQOvkl.md.png" alt="WMEBEM Logo" class="mx-auto h-20 w-auto mb-4">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                IV Furosemide in Heart Failure: How Big is the BP Drop?
+            </h1>
+            <p class="text-lg text-gray-600 mt-2">
+                A Critical Appraisal of the Harrison et al. (2025) Paper
+            </p>
+        </header>
+
+        <!-- Main Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- PICO Card -->
+            <div class="card p-6 lg:col-span-3">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                    <i class="ph-bold ph-question mr-3 text-blue-600"></i>The Clinical Question (PICO)
+                </h2>
+                <div class="space-y-4 text-gray-700">
+                    <p><strong class="font-semibold text-gray-800">Population:</strong> 253 adult patients in 5 US Emergency Departments with acute decompensated heart failure (ADHF).</p>
+                    <p><strong class="font-semibold text-gray-800">Intervention:</strong> Administration of intravenous (IV) furosemide.</p>
+                    <p><strong class="font-semibold text-gray-800">Comparison:</strong> The study used multivariable-adjusted mixed-effects regression to isolate the haemodynamic effect of IV furosemide from all other confounders (e.g., other treatments, baseline patient factors).</p>
+                    <p><strong class="font-semibold text-gray-800">Outcome:</strong> Change in systolic blood pressure (SBP) and the risk of hypotension (defined as SBP &lt; 90 mmHg).</p>
+                </div>
+            </div>
+
+            <!-- Study Design Card -->
+            <div class="card p-6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                    <i class="ph-bold ph-atom mr-3 text-blue-600"></i>Study Design
+                </h2>
+                 <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                    <li>Multicentre prospective observational cohort study.</li>
+                    <li>Recruited from 5 US EDs.</li>
+                    <li>Used continuous (beat-to-beat) BP monitoring via a finger-cuff monitor (ClearSight).</li>
+                    <li>Collected 598 person-hours of monitoring (91,210 observations).</li>
+                </ul>
+            </div>
+
+            <!-- Population Card -->
+            <div class="card p-6 lg:col-span-2">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                    <i class="ph-bold ph-users-three mr-3 text-blue-600"></i>Who Was Studied? (n=253)
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="flex items-center">
+                        <i class="ph-bold ph-user-circle text-3xl mr-3 text-gray-500"></i>
+                        <div>
+                            <p class="font-semibold">Median Age: 60 years</p>
+                            <p class="text-sm text-gray-500">45% female</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="ph-bold ph-heartbeat text-3xl mr-3 text-gray-500"></i>
+                        <div>
+                            <p class="font-semibold">Median Ejection Fraction: 40%</p>
+                            <p class="text-sm text-gray-500">(IQR 25-59%)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="ph-bold ph-gauge text-3xl mr-3 text-gray-500"></i>
+                        <div>
+                            <p class="font-semibold">Median SBP at time of IVFu: 148 mmHg</p>
+                            <p class="text-sm text-gray-500">(IQR 126-174 mmHg)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="ph-bold ph-drop text-3xl mr-3 text-gray-500"></i>
+                        <div>
+                            <p class="font-semibold">Median IV Furosemide Dose: 40mg</p>
+                            <p class="text-sm text-gray-500">(Analysis also covered 80mg & 100mg)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Central Illustration Card -->
+            <div class="card p-0 lg:col-span-3">
+                <h2 class="text-2xl font-bold text-gray-900 p-6 mb-0">
+                    Central Illustration
+                </h2>
+                <!-- Assuming image is in 'images/' folder as requested -->
+                <img src="images/furosemidestudy.jpg" alt="Central illustration from the Harrison et al. paper on furosemide and hypotension" class="w-full h-auto object-cover">
+            </div>
+            
+            <!-- Key Finding: Variance -->
+            <div class="card p-6 lg:col-span-3 text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                    How much of the BP drop is *actually* from the furosemide?
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-4 bg-blue-50 rounded-lg">
+                        <p class="text-6xl font-extrabold text-blue-600">1.4%</p>
+                        <p class="font-semibold text-blue-800 mt-1">...of the total variance in SBP was explained by IV furosemide.</p>
+                    </div>
+                    <div class="p-4 bg-blue-50 rounded-lg">
+                        <p class="text-6xl font-extrabold text-blue-600">1.7%</p>
+                        <p class="font-semibold text-blue-800 mt-1">...of the total risk of hypotension was explained by IV furosemide.</p>
+                    </div>
+                </div>
+                <p class="mt-4 text-lg text-gray-700">
+                    The vast majority (~98%) of BP variation was due to <strong class="font-semibold">confounders</strong> like baseline SBP, comorbidities, and other treatments.
+                </D>
+            </div>
+
+            <!-- Key Finding: BP Drop Magnitude -->
+            <div class="card p-6 md:col-span-1 lg:col-span-3">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                    <i class="ph-bold ph-chart-line-down mr-3 text-blue-600"></i>Magnitude of BP Drop
+                </h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-3xl md:text-4xl font-extrabold text-blue-600">-11.9 mmHg</p>
+                            <p class="font-semibold text-gray-700">Adjusted *average* SBP drop after 80mg IV Furosemide.</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl md:text-4xl font-extrabold text-blue-600">~147 minutes</p>
+                            <p class="font-semibold text-gray-700">Time to nadir (lowest BP), with a max drop of -15.2 mmHg.</p>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="ph-bold ph-timer text-3xl mr-3 text-gray-500"></i>
+                            <p>The effect was <strong class="font-semibold">transient</strong>, with BP returning towards baseline by 6 hours.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- Assuming image is in 'images/' folder as requested -->
+                        <img src="images/Screenshot 2025-10-29 at 11-16-30 Blood Pressure Effects and Risk of Hypotension due to Intravenous Furosemide in Acute Decompensated Heart Failure.png" alt="Graph showing SBP drop after IV Furosemide" class="w-full h-auto rounded-lg shadow-md">
+                        <p class="text-xs text-gray-500 mt-2 text-center">Multivariable-adjusted effect of 80mg IV Furosemide on SBP, stratified by baseline SBP. (Panel B from Figure 2)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clinical Bottom Line -->
+            <div class="card p-6 header-gradient text-white flex flex-col justify-center items-center text-center lg:col-span-3">
+                <i class="ph-bold ph-first-aid-kit text-6xl mb-3"></i>
+                <h2 class="text-2xl font-bold mb-2">Clinical Bottom Line</h2>
+                <p class="text-lg">
+                    BP reductions from IV furosemide are <strong class="font-extrabold">modest, transient, and predictable</strong>.
+                </p>
+                <p class="text-lg mt-2">
+                    Do not withhold guideline-directed IV furosemide in ADHF for fear of hypotension, *unless* the patient's baseline SBP is already low or they are on other high-risk vasoactive drugs.
+                </p>
+            </div>
+            
+            <!-- Hypotension Risk Card -->
+            <div class="card p-6 lg:col-span-3">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                    What is the *Actual* Risk of Hypotension (SBP < 90)?
+                </h2>
+                <p class="text-gray-600 mb-6">The adjusted risk was overwhelmingly dependent on baseline SBP, not just the furosemide.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- 40mg Dose -->
+                    <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">For a 40mg IV Furosemide Dose:</h3>
+                        <div class="space-y-3">
+                            <div class="p-3 bg-green-50 rounded-md">
+                                <p class="font-semibold text-green-800">If baseline SBP ≥ 110 mmHg:</p>
+                                <p class="text-3xl font-bold text-green-600">< 1% Risk</p>
+                            </div>
+                            <div class="p-3 bg-yellow-50 rounded-md">
+                                <p class="font-semibold text-yellow-800">If baseline SBP 90-100 mmHg:</p>
+                                <p class="text-3xl font-bold text-yellow-600">≤ 2% Risk</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 80mg Dose -->
+                    <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">For an 80mg IV Furosemide Dose:</h3>
+                         <div class="space-y-3">
+                            <div class="p-3 bg-green-50 rounded-md">
+                                <p class="font-semibold text-green-800">If baseline SBP ≥ 120 mmHg:</p>
+                                <p class="text-3xl font-bold text-green-600">≤ 2% Risk</p>
+                            </div>
+                            <div class="p-3 bg-yellow-50 rounded-md">
+                                <p class="font-semibold text-yellow-800">If baseline SBP 90-100 mmHg:</p>
+                                <p class="text-3xl font-bold text-yellow-600">3-4% Risk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 text-center text-lg text-gray-700 p-4 bg-blue-50 rounded-lg">
+                    <i class="ph-bold ph-clock-countdown text-3xl text-blue-600"></i>
+                    <p>No patient experienced sustained hypotension for <strong class="font-semibold">≥ 30 consecutive minutes</strong>.</p>
+                </div>
+            </div>
+
+            <!-- NEW: Hypotension Minutes Table Card -->
+            <div class="card p-6 lg:col-span-3">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                    <i class="ph-bold ph-table mr-3 text-blue-600"></i>Cumulative Minutes of Hypotension (in 6 hours)
+                </h2>
+                <p class="text-gray-600 mb-4">This table (from Figure 4) shows the multivariable-adjusted cumulative minutes (95% CI) of hypotension (SBP < 90) within 6 hours of giving IV furosemide.</p>
+                <div class="overflow-x-auto rounded-lg border border-gray-200">
+                    <table class="w-full hypo-table">
+                        <thead>
+                            <tr>
+                                <th class="w-1/4">Baseline SBP</th>
+                                <th class="w-1/4">40mg Furosemide</th>
+                                <th class="w-1/4">80mg Furosemide</th>
+                                <th class="w-1/4">100mg Furosemide</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="font-semibold">90 mmHg</td>
+                                <td>6 (2-10)</td>
+                                <td>14 (9-21)</td>
+                                <td>23 (16-30)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">100 mmHg</td>
+                                <td>4 (1-8)</td>
+                                <td>11 (6-17)</td>
+                                <td>17 (11-25)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">110 mmHg</td>
+                                <td>3 (1-7)</td>
+                                <td>9 (4-13)</td>
+                                <td>14 (8-20)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">120 mmHg</td>
+                                <td>2 (0-5)</td>
+                                <td>7 (2-11)</td>
+                                <td>10 (6-16)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">130 mmHg</td>
+                                <td>2 (0-4)</td>
+                                <td>5 (2-9)</td>
+                                <td>8 (4-13)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">150 mmHg</td>
+                                <td>1 (0-3)</td>
+                                <td>3 (0-6)</td>
+                                <td>5 (2-9)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">180 mmHg</td>
+                                <td>0 (0-1)</td>
+                                <td>1 (0-3)</td>
+                                <td>2 (0-5)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p classs="text-sm text-gray-500 mt-3"><strong>Key Takeaway:</strong> Even with a low SBP of 90, a 40mg dose resulted in a median of only 6 cumulative minutes of hypotension over 6 hours. With a more typical SBP of 120, an 80mg dose resulted in only 7 minutes.</p>
+            </div>
+
+            <!-- Strengths and Limitations -->
+            <div class="card p-6 lg:col-span-3">
+                 <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                    <i class="ph-bold ph-scales mr-3 text-blue-600"></i>Strengths & Limitations
+                </h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-semibold text-lg text-green-700 mb-2 flex items-center"><i class="ph-bold ph-check-circle mr-2"></i>Strengths</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li>Prospective, multicentre design.</li>
+                            <li><strong class="font-semibold">Continuous beat-to-beat BP monitoring</strong>, which is far more accurate for this question than intermittent cuff measurements.</li>
+                            <li>Robust, modern statistical modelling (mixed-effects regression) to isolate the drug's true effect from confounders.</li>
+                            <li>Clinically relevant and pragmatic question.</li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h3 class="font-semibold text-lg text-red-700 mb-2 flex items-center"><i class="ph-bold ph-x-circle mr-2"></i>Limitations</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li><strong class="font-semibold">Observational design:</strong> Cannot prove causation, only association (though it's strong).</li>
+                            <li>Finger-cuff monitoring is not the same as an arterial line (though validated to be close).</li>
+                            <li>Sample included few doses > 100mg, so results may not apply to very high-dose strategies.</li>
+                            <li>Doesn't assess repeated or "stacked" dosing, only the initial ED dose.</li>
+                        </ul>
+                    </div>
+                 </div>
+            </div>
+
+            <!-- Further Resources Card -->
+            <div class="card p-6 lg:col-span-3">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-books mr-3 text-blue-600"></i>Further Resources</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center">
+                    <!-- Paper -->
+                    <a href="https://drive.google.com/file/d/1eHm5ksxc89T3EKj5kQkfp6RWA792fiWR/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="block p-4 bg-gray-100 hover:bg-blue-100 rounded-lg transition-colors">
+                        <i class="ph-bold ph-read-cv-logo text-4xl text-blue-600"></i>
+                        <p class="mt-2 font-semibold text-gray-800">Full Paper</p>
+                    </a>
+                    <!-- Appraisal Doc -->
+                     <a href="https://docs.google.com/document/d/1gLpYvEeuzoF2IeIXpN5nNcSpagRWmG9A/edit?usp=sharing&ouid=116691911180668778350&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="block p-4 bg-gray-100 hover:bg-blue-100 rounded-lg transition-colors">
+                        <i class="ph-bold ph-file-text text-4xl text-blue-600"></i>
+                        <p class="mt-2 font-semibold text-gray-800">Appraisal Doc</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- NEW: Video Player Card -->
+            <div class="card p-6 lg:col-span-3">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-youtube-logo mr-3 text-red-600"></i>Video Summary</h2>
+                <div class="responsive-iframe-container rounded-lg shadow-inner overflow-hidden">
+                    <iframe src="https://www.youtube.com/embed/XuIXJbJT4QA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <!-- NEW: Podcast Player Card -->
+            <div class="card p-6 lg:col-span-3">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-spotify-logo mr-3 text-green-600"></i>Podcast</h2>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/49uKKg4CRsa7gfCKgx9TwY?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            
+            <!-- Critical Appraisal Points Section -->
+            <div class="lg:col-span-3 mt-8">
+                 <h2 class="text-3xl font-extrabold text-gray-900 mb-6 text-center">
+                    Critical Appraisal Points for UK EM Practice
+                </h2>
+                 <div class="space-y-6">
+                    <!-- Point 1 -->
+                    <div class="card p-6 appraisal-card">
+                        <p class="font-bold text-lg text-gray-800">
+                            1. Identify the *Real* Culprits: It's the combination that matters.
+                        </p>
+                        <div class="mt-3 text-gray-700 bg-blue-50 p-4 rounded-lg">
+                            <p>This study found that IV furosemide alone has a modest effect. The real danger comes from <strong class="font-semibold">multiplicative interactions</strong>.</p>
+                            <p class="mt-2">The analysis showed that co-administration of furosemide with <strong class="text-red-600 font-semibold">IV or PO Diltiazem</strong>, <strong class="text-red-600 font-semibold">NIPPV</strong>, or <strong class="text-red-600 font-semibold">ACEi/ARBs</strong> was associated with a significantly greater drop in SBP.</p>
+                            <p class="mt-2">In practice, this means your haemodynamic caution should be exponentially higher in a patient receiving furosemide *and* one of these other therapies.</p>
+                        </div>
+                    </div>
+                     <!-- Point 2 -->
+                    <div class="card p-6 appraisal-card">
+                        <p class="font-bold text-lg text-gray-800">
+                            2. This Paper Should Re-frame (and reduce) Our Fear.
+                        </p>
+                        <div class="mt-3 text-gray-700 bg-blue-50 p-4 rounded-lg">
+                            <p>Many clinicians (up to 20% in one survey) admit to withholding or under-dosing IV furosemide due to fear of hypotension, even when SBP is normal.</p>
+                             <p class="mt-2">This paper provides strong evidence that this fear is likely <strong class="font-semibold">overstated</strong>. In the majority of ADHF patients (who present with SBP > 120 mmHg), the risk of clinically significant hypotension from a standard 40-80mg dose is minimal (<2%).</p>
+                             <p class="mt-2">The focus should shift from "will the furosemide cause hypotension?" to "is the patient's *baseline SBP* and *comorbid medication list* safe for diuresis?"</p>
+                        </div>
+                    </div>
+                     <!-- Point 3 -->
+                    <div class="card p-6 appraisal-card">
+                        <p class="font-bold text-lg text-gray-800">
+                            3. This Supports Guideline-Directed Care.
+                        </p>
+                        <div class="mt-3 text-gray-700 bg-blue-50 p-4 rounded-lg">
+                            <p>We know that inadequate decongestion in hospital leads to a 3- to 6-fold increase in short-term readmission and death. Under-dosing diuretics is harmful.</p>
+                            <p class="mt-2">This study is reassuring and <strong class="font-semibold">empowers us to follow guidelines</strong>: for the typical hypertensive or normotensive ADHF patient, administering an appropriate dose of IV furosemide is haemodynamically safe and is the correct treatment to improve patient outcomes.</p>
+                        </div>
+                    </div>
+
+                 </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="text-center mt-12 pt-8 border-t border-gray-300">
+            <p class="text-sm text-gray-500">
+                Designed by Dr Jake Turner for WMEBEM.
+            </D>
+            <p class="text-sm text-gray-500 mt-4">
+                <strong>Disclaimer:</strong> This infographic is an educational summary intended for revision purposes only. It is not a substitute for reading the original research paper or for clinical guidelines. Always refer to the full publication for a complete understanding.
+            </p>
+            <p class="text-xs text-gray-400 mt-2">
+                <strong>Reference:</strong> Harrison NE, Bhaskara M, Wilson K, et al. Blood Pressure Effects and Risk of Hypotension due to Intravenous Furosemide in Acute Decompensated Heart Failure. Acad Emerg Med. 2025; 0:1-12. https://doi.org/10.1111/acem.70125
+            </p>
+            <p class="text-xs text-gray-400 mt-4">
+                <!-- Creative Commons License -->
+                © 2025 WMEBEM. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="underline hover:text-blue-600" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. You are free to share and adapt this material for non-commercial purposes, provided you give appropriate credit.
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+
+
